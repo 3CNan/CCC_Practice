@@ -2,16 +2,13 @@ X = int(input())
 Same, Sepa, Place = [], [], []
 count = 0
 for i in range(X):
-    p1, p2 = input().split()
-    Same.append([p1, p2])
+    Same.append(list(input().split()))
 Y = int(input())
 for i in range(Y):
-    p1, p2 = input().split()
-    Sepa.append([p1, p2])
+    Sepa.append(list(input().split()))
 G = int(input())
 for i in range(G):
-    p1, p2, p3 = input().split()
-    Place.append([p1, p2, p3])
+    Place.append(list(input().split()))
 for i in Same:
     for j in Place:
         if (i[0] not in j and i[1] in j) or (i[0] in j and i[1] not in j):
@@ -23,4 +20,5 @@ for i in Sepa:
             count += 1
             break
 print(count)
+# 8/15
 # END
